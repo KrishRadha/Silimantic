@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+
+<html lang="en" ng-app="newinkapp">
+  <head>
+    <meta charset="utf-8">
+  
+
+    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+       <title> Dashboard </title>
+            <!-- Latest compiled and minified CSS -->
+       <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="resources/css/respstrap.css" type="text/css">
+       
+ 
+    <link rel="stylesheet" href="resources/dist/css/flat-ui.css" type="text/css">
+     
+      <link rel="stylesheet" href="resources/editor/medium-editor.min.css">
+      <link rel="stylesheet" href="resources/editor/default.css">
+      <link rel="stylesheet" href="resources/css/fontawe/css/font-awesome.css" type="text/css">
+      
+      <link rel="stylesheet" href="resources/editor/medium-editor-insert-plugin.min.css">
+      
+      <script src="resources/dist/js/vendor/jquery.min.js"></script>
+      <script src="resources/editor/jquery.ui.widget.js"></script>
+    <script src="resources/editor/jquery.iframe-transport.js"></script>
+    <script src="resources/editor/jquery.fileupload.js"></script>
+    <script src="resources/editor/medium-editor.js"></script>
+    <script src="resources/editor/handlebars.runtime.min.js"></script>
+    <script src="resources/editor/jquery-sortable-min.js"></script>
+      
+    <script src="resources/editor/medium-editor-insert-plugin.min.js"></script>
+    
+      <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="dist/js/vendor/html5shiv.js"></script>
+      <script src="dist/js/vendor/respond.min.js"></script>
+    <![endif]-->
+    
+      <script src="resources/js/angular.js" ></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <!-- JQUERY-->
+        
+       
+    <script src="controllers/newink_controll.js"></script>
+    
+    
+    
+    <script src="resources/dist/js/vendor/video.js"></script>
+    
+     <script src="resources/dist/js/flat-ui.min.js"></script>
+    
+    <link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+    </head>
+<body style="background-color:#FFFFFF;" ng-controller="Newpostcont">
+       <!-------------------------------------------------------------------------------------------------------------------------------->
+         
+          <!-- ------------------------------------------------- HEADER ------------------------------------------------->
+     
+      <div class="row demo-row" >
+          
+          
+          
+        <div class="col-xs-12">
+          <nav class="navbar navbar-inverse navbar-embossed" style="border-radius:0px" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+              <a class="navbar-brand" href="#">InkoView</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-01">
+              
+               <form class="navbar-form navbar-left" action="#" role="search">
+                <div class="form-group">
+                    
+                  <div class="input-group">
+                    <input class="form-control" id="navbarInput-01" type="search" placeholder="Search"/>
+                    <span class="input-group-btn">
+                      <button type="submit" style="background:#E74C3C" class="btn"><span class="fui-search"></span></button>
+                    </span>
+                  </div>
+                </div>
+              </form>
+                
+                <ul class="nav navbar-nav navbar-right">
+                 <!--   <li><a href="/newview"><span class="fui-new"></span> &nbsp;Create an Inkoview</a></li> -->
+                <li><a href="#fakelink"><span class="fui-home"></span></a></li>
+                    
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <%= user.name %> <b class="caret"></b></a>
+                  <span class="dropdown-arrow"></span>
+                  <ul class="dropdown-menu">
+                      <li><a href="#">Notifications</a></li>
+                    <li><a href="#">My Profile</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Messages</a></li>
+                      
+                      
+                    <li class="divider"></li>
+                    <li><a href="/logout">Logout</a></li>
+                  </ul>
+                </li>
+                
+               </ul>
+                
+            </div><!-- /.navbar-collapse -->
+          </nav><!-- /navbar -->
+        </div>
+      </div> <!-- /row -->
+    
+    <form>
+    
+        
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+    
+    
+    
+   <div id="newpostpanel">
+    
+    <div class="row">
+    
+        <div class="col-xs-1"></div>
+        
+        <div class="col-xs-9">
+        
+            <div class="jumbotron" style="border-radius:6px;background-color:#FFFFFF">
+
+                <h4>Select one category among the following to which your Inkoview belongs!</h4>
+                <hr/>
+            
+    <div class="row demo-row">
+        <div class="col-xs-4">
+          <a href="#fakelink" ng-click="PersonInk()" class="btn btn-block btn-lg btn-primary">Person</a>
+        </div>
+        <div class="col-xs-4">
+          <a href="#fakelink" ng-click="IncidentInk()" class="btn btn-block btn-lg btn-warning">Incident</a>
+        </div>
+        
+        <div class="col-xs-4">
+          <a href="#fakelink" ng-click="ConceptInk()" class="btn btn-block btn-lg btn-danger">Concept</a>
+        </div>
+      </div> <!-- /row -->
+
+                <br/>
+      <div class="row demo-row">
+        <div class="col-xs-4">
+          <a href="#fakelink" ng-click="ServiceInk()" class="btn btn-block btn-lg btn-success">Service</a>
+        </div>
+        <div class="col-xs-4">
+          <a href="#fakelink" ng-click="EntertainmentInk()" class="btn btn-block btn-lg btn-inverse">Entertainment</a>
+        </div>
+        <div class="col-xs-4">
+          <a href="#fakelink" ng-click="ProductInk()" class="btn btn-block btn-lg btn-info">Product</a>
+        </div>
+        
+      </div>
+                
+            </div>
+        
+                
+                
+        </div>
+            
+             
+        <div class="col-xs-1"></div>
+    
+    </div>
+        
+    
+    
+        
+</div>
+    
+    <div class="row" id="PersonInkpanel">
+        <div class="col-xs-2" ></div>
+        <div class="col-xs-9">
+    <label> <h5>Give us the InkoView Username of the person you wanna talk about. </h5></label>
+         <input class="form-control" ng-model="person.url" id="person_url" type="text" placeholder="You can find the username on their Inkoview profile , if he/she is not on inkoview yet, why don't you invite them :)"/>
+    <hr/>
+            <h4>Now tell the world what you want to tell about the Person.</h4>
+        <div class="another person_review" data-placeholder="" style="border:none" id="person_review"></div>
+            <input type="text" ng-model="person.review" id="buffer_store_person" style="display:none"/>
+            <br/>
+            <hr/>
+            
+            <div class="col-xs-3">
+          <a href="#fakelink" ng-click="Submit_Person()" class="btn btn-block btn-lg btn-primary">Submit your Opinion</a>
+                <div id="error_person"></div>
+        </div>
+            
+             <div class="col-xs-3">
+          <label class="form-control" class="checkbox" for="checkbox1">
+            <input  type="checkbox" value=""  ng-model="person.undercover" id="checkbox1" data-toggle="checkbox">
+            
+             <i>Stay UnderCover?</i>
+          </label>
+            </div>
+        </div>
+        
+        
+        <div class="col-xs-1"></div>
+        
+    </div>
+       
+    
+       
+   </form>
+    
+    <script>
+        
+        var editor2 = new MediumEditor('.person_review',{placeholder:{text:'Remember that you can not edit the reviews.For more details visit inkoview.com/guidelines',hideOnClick:true}});
+        $(function () {
+            $('.person_review').mediumInsert({
+                editor: editor2
+                
+            });
+        });
+        
+        
+        
+        
+        $(function () {
+        $( "#person_review" ).keyup(function() {
+            
+            
+  $("#buffer_store_person").val(editor2.serialize()['person_review']['value']);
+            $("#buffer_store_person").trigger('input');
+        });});
+        
+        
+</script>
+       
+    
+   
+    
+    </body>
+
+
+
+</html>

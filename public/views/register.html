@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+
+
+<html ng-app="register_app">
+
+<head>
+     
+       <title> Register </title>
+            <!-- Latest compiled and minified CSS -->
+         <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="resources/css/respstrap.css" type="text/css">
+        <link rel="stylesheet" href="resources/css/ipel.css" type="text/css">
+    <link rel="stylesheet" href="resources/dist/css/flat-ui.css" type="text/css">
+    
+    
+      <script src="resources/js/angular.js" ></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <!-- JQUERY-->
+        <script src="resources/js/jquery.js" ></script>
+       <script src="resources/js/respstrap.js" ></script>
+    <script src="controllers/register_controll.js"></script>
+    
+    <script src="resources/dist/js/vendor/jquery.min.js"></script>
+    <script src="resources/dist/js/vendor/video.js"></script>
+    <script src="resources/dist/js/flat-ui.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+    </head>
+<body style="background-color:#8e44ad;" ng-controller="RegisterCont">
+     
+    <!-------------------------------------------------------------------------------------------------------------------------------->
+         
+          <!-- ------------------------------------------------- HEADER ------------------------------------------------->
+    <br/>
+    <br/>
+        <!-------------------------------------------------------- done header--------------------------------------------->
+    
+    <!----------------------------------------------------LOGIN FORM-------------------------------------------------------->
+    <form>
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+    
+          <div class="row">
+<div class="col-xs-4">
+              </div>
+              <div class="col-xs-4">
+          <div class="login-form" align="center">
+              <img  src="resources/images/logo4.png"/>
+              <hr/>
+            <div class="form-group">
+              <input type="text" ng-model="user.name" class="form-control login-field" value="" placeholder="Enter your name" id="login-name" />
+              <label class="login-field-icon fui-user" for="login-name"></label>
+            </div>
+              
+               <div class="form-group">
+              <input type="text" ng-model="user.email" class="form-control login-field" value="" placeholder="Enter your email id" id="login-email" />
+              <label class="login-field-icon fui-mail" for="login-name"></label>
+            </div>
+
+            <div class="form-group">
+              <input type="password" ng-model="user.password"  class="form-control login-field" value="" placeholder="Password" id="login-pass" />
+              <label class="login-field-icon fui-lock" for="login-pass"></label>
+            </div>
+              <div class="form-group">
+              <input type="password" ng-model="user.repassword"  class="form-control login-field" value="" placeholder="Re type your Password" id="login-repass" />
+              <label class="login-field-icon fui-lock" for="login-pass"></label>
+            </div>
+
+              <div id="error_reg_box"></div>
+            <a class="btn btn-primary btn-lg btn-block" style="background-color:#8e44ad" ng-click="Registernow()">Join Inkoview!</a>
+            <a class="login-link" href="/login">Already Have an account? Then Login!</a>
+              
+          </div>
+                  </div>
+    <div class="col-xs-4">
+    </div>
+       
+      </div>
+    </form>
+    <!----------------------------------------------------REGISTER ENDS----------------------------------------------------------->
+    
+    
+    </body>
+
+
+
+</html>
